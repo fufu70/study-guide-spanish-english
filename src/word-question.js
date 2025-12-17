@@ -4,7 +4,7 @@ const WordQuestion = function(params) {
 	}
 
 	function isCorrect(p, answer) {
-		if (typeof params === 'string') {
+		if (typeof p === 'string') {
 			answer = p;
 			p = params;
 		}

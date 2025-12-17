@@ -7,7 +7,6 @@ const SentenceQuestion = function(params) {
 		if (typeof p === 'string') {
 			answer = p;
 			p = params;
-		} else {
 		}
 		return getCorrectAnswers(p).indexOf(answer) > -1;
 	}
