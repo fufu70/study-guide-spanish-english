@@ -3,8 +3,13 @@ const SentenceQuestion = function(params) {
 		return [params.sentence[params.answerLang]];
 	}
 
-	function isCorrect(params, answer) {
-		return getCorrectAnswers(params).indexOf(answer) > -1;
+	function isCorrect(p, answer) {
+		if (typeof p === 'string') {
+			answer = p;
+			p = params;
+		} else {
+		}
+		return getCorrectAnswers(p).indexOf(answer) > -1;
 	}
 
 	function phraseQuestion(params) {

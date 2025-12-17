@@ -3,8 +3,12 @@ const WordQuestion = function(params) {
 		return params.word.translation;
 	}
 
-	function isCorrect(params, answer) {
-		return getCorrectAnswers(params).indexOf(answer) > -1;
+	function isCorrect(p, answer) {
+		if (typeof params === 'string') {
+			answer = p;
+			p = params;
+		}
+		return getCorrectAnswers(p).indexOf(answer) > -1;
 	}
 
 	function phraseQuestion(params) {
