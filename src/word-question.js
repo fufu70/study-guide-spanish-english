@@ -27,7 +27,7 @@ const WordQuestion = function(params) {
 			}
 			return acc;
 		}, [])
-
+í
 		if (params.questionLang == 'es') {
 			let phrase = `¡Correcto!`;
 			if (otherCorrectAnswers.length > 0) {
